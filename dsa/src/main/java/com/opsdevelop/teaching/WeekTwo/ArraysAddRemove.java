@@ -6,7 +6,7 @@ public class ArraysAddRemove {
     public static void removeElement() {
         int[] array = {1, 2, 3, 4, 5};
         int[] newArray = new int[array.length - 1];
-        int valueToRemove = 2;
+        int valueToRemove = 4;
         int indexToRemove = -1;
 
         // Find the index of the value to remove
@@ -29,7 +29,7 @@ public class ArraysAddRemove {
                 }
             }
         }
-
+        System.out.println(Arrays.toString(array));
         System.out.println(Arrays.toString(newArray));
     }
 

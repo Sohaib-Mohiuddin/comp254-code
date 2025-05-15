@@ -7,5 +7,14 @@ public class DoublyLinkedListExample {
         customList.addLast(3);
 
         System.out.println(customList.toString());
+
+        customList.addLast(5);
+        customList.addFirst(7);
+
+        System.out.println(customList.toString());
+
+        customList.addLast(9);
+
+        System.out.println(customList.toString());
     }
 }

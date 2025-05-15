@@ -11,6 +11,8 @@ public class ArrayListExample {
 
         // Add some cars to the ArrayList
         car.add("Honda");
+        car.add("Audi");
+        car.add("BMW");
         car.add("Toyota");
 
         System.out.println("The Cars List Contains: " + car);
