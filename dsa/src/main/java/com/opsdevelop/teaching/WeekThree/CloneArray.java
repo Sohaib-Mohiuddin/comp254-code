@@ -28,6 +28,7 @@ public class CloneArray {
         System.out.println("arr == clone: " + (arr == clone));
         System.out.println("arr.equals(clone): " + customArrayEquals(arr, clone));
         System.out.println("arr[0] == clone[0]: " + (arr[0] == clone[0]));
+        System.out.println((Arrays.equals(arr, clone)));
     }
 
     /**
@@ -47,6 +48,7 @@ public class CloneArray {
         System.out.println("arr.equals(clone): " + arr.equals(clone));
         System.out.println("arr[0] == clone[0]: " + (arr[0] == clone[0]));
         System.out.println("arr[0][0] == clone[0][0]: " + (arr[0][0] == clone[0][0]));
+        System.out.println("Arrays.deepEquals(arr, clone): " + Arrays.deepEquals(arr, clone));
     }
 
     // Custom method for array equality

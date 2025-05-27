@@ -157,7 +157,7 @@ public class COMP254CLL {
             COMP254CLLNode current = this.head;
             System.out.print(this.size + " ");
             do {
-                System.out.print(current.getData() + " ");
+                System.out.print(current.getData() + ", ");
                 current = current.getNext();
             } while (current != this.head);
             System.out.println();
