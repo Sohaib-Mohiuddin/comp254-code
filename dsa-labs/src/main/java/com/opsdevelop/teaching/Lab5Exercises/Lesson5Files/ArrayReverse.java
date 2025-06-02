@@ -1,4 +1,4 @@
-package com.opsdevelop.teaching.Labs.Lab5Exercises.Lesson5Files;/*
+package com.opsdevelop.teaching.Lab5Exercises.Lesson5Files;/*
  * Copyright 2014, Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser
  *
  * Developed for use with the book:
@@ -22,31 +22,31 @@ package com.opsdevelop.teaching.Labs.Lab5Exercises.Lesson5Files;/*
  */
 
 /**
- * Demonstration of recursive factorial function.
+ * Demonstration of recursive method for reversing an array's elements.
  *
  * @author Michael T. Goodrich
  * @author Roberto Tamassia
  * @author Michael H. Goldwasser
  */
-public class Factorial {
+public class ArrayReverse {
 
-  /** Computes the factorial of the given (nonnegative) integer) */
-  public static int factorial(int n) throws IllegalArgumentException {
-    if (n < 0)
-      throw new IllegalArgumentException();     // argument must be nonnegative
-    else if (n == 0)
-      return 1;                                 // base case
-    else
-      return n * factorial(n-1);                // recursive case
+  /** Reverses the contents of subarray data[low] through data[high] inclusive. */
+  public static void reverseArray(int[] data, int low, int high) {
+    if (low < high) {                         // if at least two elements in subarray
+      int temp = data[low];                   // swap data[low] and data[high]
+      data[low] = data[high];
+      data[high] = temp;
+      reverseArray(data, low + 1, high - 1);  // recur on the rest
+    }
   }
 
-  /** Simple test, assuming valid integer given as command-line argument */
-  public static void main(String[] args) {
-    if (args.length > 0) {
-      int n = Integer.parseInt(args[0]);
-      try { System.out.println("factorial("+n+") = " + factorial(n)); }
-      catch (IllegalArgumentException e) {
-        System.out.println("Error: the factorial function is undefined for negative integers"); }
+  /** Reverses the contents of the given array. */
+  public static void reverseIterative(int[] data) {
+    int low = 0, high = data.length - 1;
+    while (low < high) {                   // swap data[low] and data[high]
+      int temp = data[low];
+      data[low++] = data[high];            // post-increment of low
+      data[high--] = temp;                 // post-decrement of high
     }
   }
 

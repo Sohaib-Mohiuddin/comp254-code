@@ -1,4 +1,4 @@
-package com.opsdevelop.teaching.Labs.Lab5Exercises.Lesson5Files;/*
+package com.opsdevelop.teaching.Lab5Exercises.Lesson5Files;/*
  * Copyright 2014, Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser
  *
  * Developed for use with the book:

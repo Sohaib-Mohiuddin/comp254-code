@@ -16,7 +16,7 @@ public class App {
          * 5k.json 3000 ns; 10k.json 3000 ns; 20k.json 4000 ns; 50k.json 5000 ns; 100k.json 5500 ns
          * Run times are varying based on the system and environment.
          */
-        Algorithms.binarySearch("100k", 99999);
+        Algorithms.binarySearch("100k", 54786);
 
         /*
          * Merge Sort Run Times
@@ -33,6 +33,9 @@ public class App {
         Algorithms.selectionSort("20k_random");
     }
 
+    public static void week5Runnable() {
+
+    }
     public static void main(String[] args) {
         week4Runnable();
     }

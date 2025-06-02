@@ -1,4 +1,4 @@
-package com.opsdevelop.teaching.Labs.Lab5Exercises.Lesson5Files;/*
+package com.opsdevelop.teaching.Lab5Exercises.Lesson5Files;/*
  * Copyright 2014, Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser
  *
  * Developed for use with the book:
@@ -20,34 +20,20 @@ package com.opsdevelop.teaching.Labs.Lab5Exercises.Lesson5Files;/*
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-
 /**
- * Demonstration of recursive method for reversing an array's elements.
+ * Demonstration of a recursive (and very bad) solution to element uniqueness problem.
  *
  * @author Michael T. Goodrich
  * @author Roberto Tamassia
  * @author Michael H. Goldwasser
  */
-public class ArrayReverse {
+public class Unique3 {
 
-  /** Reverses the contents of subarray data[low] through data[high] inclusive. */
-  public static void reverseArray(int[] data, int low, int high) {
-    if (low < high) {                         // if at least two elements in subarray
-      int temp = data[low];                   // swap data[low] and data[high]
-      data[low] = data[high];
-      data[high] = temp;
-      reverseArray(data, low + 1, high - 1);  // recur on the rest
-    }
+  /** Returns true if there are no duplicate values from data[low] through data[high].*/
+  public static boolean unique3(int[] data, int low, int high) {
+    if (low >= high) return true;                         // at most one item
+    else if (!unique3(data, low, high-1)) return false;   // duplicate in first n-1
+    else if (!unique3(data, low+1, high)) return false;   // duplicate in last n-1
+    else return (data[low] != data[high]);                // do first and last differ?
   }
-
-  /** Reverses the contents of the given array. */
-  public static void reverseIterative(int[] data) {
-    int low = 0, high = data.length - 1;
-    while (low < high) {                   // swap data[low] and data[high]
-      int temp = data[low];
-      data[low++] = data[high];            // post-increment of low
-      data[high--] = temp;                 // post-decrement of high
-    }
-  }
-
 }

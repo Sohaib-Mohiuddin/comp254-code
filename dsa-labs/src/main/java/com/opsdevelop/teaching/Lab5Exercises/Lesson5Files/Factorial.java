@@ -1,4 +1,4 @@
-package com.opsdevelop.teaching.Labs.Lab5Exercises.Lesson5Files;/*
+package com.opsdevelop.teaching.Lab5Exercises.Lesson5Files;/*
  * Copyright 2014, Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser
  *
  * Developed for use with the book:
@@ -20,20 +20,34 @@ package com.opsdevelop.teaching.Labs.Lab5Exercises.Lesson5Files;/*
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 /**
- * Demonstration of a recursive (and very bad) solution to element uniqueness problem.
+ * Demonstration of recursive factorial function.
  *
  * @author Michael T. Goodrich
  * @author Roberto Tamassia
  * @author Michael H. Goldwasser
  */
-public class Unique3 {
+public class Factorial {
 
-  /** Returns true if there are no duplicate values from data[low] through data[high].*/
-  public static boolean unique3(int[] data, int low, int high) {
-    if (low >= high) return true;                         // at most one item
-    else if (!unique3(data, low, high-1)) return false;   // duplicate in first n-1
-    else if (!unique3(data, low+1, high)) return false;   // duplicate in last n-1
-    else return (data[low] != data[high]);                // do first and last differ?
+  /** Computes the factorial of the given (nonnegative) integer) */
+  public static int factorial(int n) throws IllegalArgumentException {
+    if (n < 0)
+      throw new IllegalArgumentException();     // argument must be nonnegative
+    else if (n == 0)
+      return 1;                                 // base case
+    else
+      return n * factorial(n-1);                // recursive case
   }
+
+  /** Simple test, assuming valid integer given as command-line argument */
+  public static void main(String[] args) {
+    if (args.length > 0) {
+      int n = Integer.parseInt(args[0]);
+      try { System.out.println("factorial("+n+") = " + factorial(n)); }
+      catch (IllegalArgumentException e) {
+        System.out.println("Error: the factorial function is undefined for negative integers"); }
+    }
+  }
+
 }
