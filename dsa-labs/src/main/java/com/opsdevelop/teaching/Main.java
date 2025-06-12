@@ -19,7 +19,7 @@ public class Main {
         ArrayStack<String> stack = new ArrayStack<>(10); // Create an ArrayStack with capacity 10
 
         // List of names to push onto the stack
-        String[] names = {"Alice", "Bob", "Charlie", "Diana", "Eve"};
+        String[] names = {"Alice", "Bob", "Charlie", "Diana", "Eve", "Sohaib"};
 
         // Push the names onto the stack
         for (String name : names) {
@@ -39,10 +39,12 @@ public class Main {
     public static void lab6Ex3Runnable() {
         LinkedStack<String> stack = new LinkedStack<>();
 
-        // Populate the stack with String objects
-        stack.push("First");
-        stack.push("Second");
-        stack.push("Third");
+        String[] names = {"First", "Second", "Third", "Fourth", "Fifth"};
+
+        for (String name : names) {
+            stack.push(name);
+            System.out.println("Pushed: " + name);
+        }
 
         // Print the stack
         System.out.println("Stack contents: " + stack);
@@ -58,6 +60,6 @@ public class Main {
     public static void main(String[] args) {
          // week5Runnable();
         lab6Ex2Runnable();
-        // lab6Ex3Runnable();
+        lab6Ex3Runnable();
     }
 }
