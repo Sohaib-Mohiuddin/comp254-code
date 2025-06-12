@@ -60,15 +60,20 @@ public class Power {
     final int BASE = 3;
 
     int answer=1;
-    for (int n=0; n < 20; n++) {
-      if (Math.abs(answer - PowerSlow.power(BASE, n)) > EPSILON)
-        System.out.println("Problem with slow power(" + BASE + "," + n +")");
-      if (Math.abs(answer - Power.power(BASE, n)) > EPSILON)
-        System.out.println("Problem with fast power(" + BASE + "," + n +")");
-      answer *= BASE;
+
+    long startTime = System.currentTimeMillis();
+
+    for (int n=0; n < 100; n++) {
+      // if (Math.abs(answer - PowerSlow.power(BASE, n)) != 0)
+        // System.out.println("Problem with slow power(" + BASE + "," + n +")");
+      // if (Math.abs(answer - Power.power(BASE, n)) != 0)
+        // System.out.println("Problem with fast power(" + BASE + "," + n +")");
+      // answer *= BASE;
+      double power = PowerSlow.power(BASE, n);
+      System.out.println("slow power(" + BASE + "," + n +") = " + power);
     }
-
-
+    long endTime = System.currentTimeMillis();
+    System.out.println("Time taken for slow power: " + (endTime - startTime) + " milliseconds");
   }
 
 }

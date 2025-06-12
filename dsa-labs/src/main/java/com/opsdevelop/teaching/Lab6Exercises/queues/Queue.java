@@ -20,63 +20,45 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.opsdevelop.teaching.Labs.Lab6Exercises.deques;
+package com.opsdevelop.teaching.Lab6Exercises.queues;
 
 /**
- * Interface for a double-ended queue: a collection of elements that can be inserted
- * and removed at both ends; this interface is a simplified version of java.util.Deque.
+ * Interface for a queue: a collection of elements that are inserted
+ * and removed according to the first-in first-out principle. Although
+ * similar in purpose, this interface differs from java.util.com.opsdevelop.teaching.Labs.Lab12Exercises.Lesson12Files.com.opsdevelop.teaching.Labs.Lab9Exercises.Lesson9Files.Queue.
  *
  * @author Michael T. Goodrich
  * @author Roberto Tamassia
  * @author Michael H. Goldwasser
  */
-public interface Deque<E> {
-
+public interface Queue<E> {
   /**
-   * Returns the number of elements in the deque.
-   * @return number of elements in the deque
+   * Returns the number of elements in the queue.
+   * @return number of elements in the queue
    */
   int size();
 
   /**
-   * Tests whether the deque is empty.
-   * @return true if the deque is empty, false otherwise
+   * Tests whether the queue is empty.
+   * @return true if the queue is empty, false otherwise
    */
   boolean isEmpty();
 
   /**
-   * Returns (but does not remove) the first element of the deque.
-   * @return first element of the deque (or null if empty)
+   * Inserts an element at the rear of the queue.
+   * @param e  the element to be inserted
+   */
+  void enqueue(E e);
+
+  /**
+   * Returns, but does not remove, the first element of the queue.
+   * @return the first element of the queue (or null if empty)
    */
   E first();
 
   /**
-   * Returns (but does not remove) the last element of the deque.
-   * @return last element of the deque (or null if empty)
-   */
-  E last();
-
-  /**
-   * Inserts an element at the front of the deque.
-   * @param e   the new element
-   */
-  void addFirst(E e);
-
-  /**
-   * Inserts an element at the back of the deque.
-   * @param e   the new element
-   */
-  void addLast(E e);
-
-  /**
-   * Removes and returns the first element of the deque.
+   * Removes and returns the first element of the queue.
    * @return element removed (or null if empty)
    */
-  E removeFirst();
-
-  /**
-   * Removes and returns the last element of the deque.
-   * @return element removed (or null if empty)
-   */
-  E removeLast();
+  E dequeue();
 }

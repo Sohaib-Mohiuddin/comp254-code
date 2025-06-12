@@ -20,46 +20,63 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.opsdevelop.teaching.Labs.Lab6Exercises.stacks;
+package com.opsdevelop.teaching.Lab6Exercises.deques;
 
 /**
- * A collection of objects that are inserted and removed according to the last-in
- * first-out principle. Although similar in purpose, this interface differs from
- * java.util.Stack.
+ * Interface for a double-ended queue: a collection of elements that can be inserted
+ * and removed at both ends; this interface is a simplified version of java.util.Deque.
  *
  * @author Michael T. Goodrich
  * @author Roberto Tamassia
  * @author Michael H. Goldwasser
  */
-public interface Stack<E> {
+public interface Deque<E> {
 
   /**
-   * Returns the number of elements in the stack.
-   * @return number of elements in the stack
+   * Returns the number of elements in the deque.
+   * @return number of elements in the deque
    */
   int size();
 
   /**
-   * Tests whether the stack is empty.
-   * @return true if the stack is empty, false otherwise
+   * Tests whether the deque is empty.
+   * @return true if the deque is empty, false otherwise
    */
   boolean isEmpty();
 
   /**
-   * Inserts an element at the top of the stack.
-   * @param e   the element to be inserted
+   * Returns (but does not remove) the first element of the deque.
+   * @return first element of the deque (or null if empty)
    */
-  void push(E e);
+  E first();
 
   /**
-   * Returns, but does not remove, the element at the top of the stack.
-   * @return top element in the stack (or null if empty)
+   * Returns (but does not remove) the last element of the deque.
+   * @return last element of the deque (or null if empty)
    */
-  E top();
+  E last();
 
   /**
-   * Removes and returns the top element from the stack.
+   * Inserts an element at the front of the deque.
+   * @param e   the new element
+   */
+  void addFirst(E e);
+
+  /**
+   * Inserts an element at the back of the deque.
+   * @param e   the new element
+   */
+  void addLast(E e);
+
+  /**
+   * Removes and returns the first element of the deque.
    * @return element removed (or null if empty)
    */
-  E pop();
+  E removeFirst();
+
+  /**
+   * Removes and returns the last element of the deque.
+   * @return element removed (or null if empty)
+   */
+  E removeLast();
 }

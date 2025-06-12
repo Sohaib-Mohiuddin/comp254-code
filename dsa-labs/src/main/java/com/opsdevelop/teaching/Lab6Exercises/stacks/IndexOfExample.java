@@ -1,4 +1,4 @@
-package com.opsdevelop.teaching.Labs.Lab6Exercises.stacks;
+package com.opsdevelop.teaching.Lab6Exercises.stacks;
 
 public class IndexOfExample
 {  

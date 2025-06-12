@@ -1,4 +1,4 @@
-package com.opsdevelop.teaching.Labs.Lab6Exercises.queues;
+package com.opsdevelop.teaching.Lab6Exercises.queues;
 
 public class UsingArrayQueue {
 

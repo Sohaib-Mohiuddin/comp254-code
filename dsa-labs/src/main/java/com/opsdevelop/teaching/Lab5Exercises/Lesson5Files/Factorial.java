@@ -29,25 +29,35 @@ package com.opsdevelop.teaching.Lab5Exercises.Lesson5Files;/*
  * @author Michael H. Goldwasser
  */
 public class Factorial {
+    // Counter for the number of recursive calls made
+    private static int count = 0;
 
-  /** Computes the factorial of the given (nonnegative) integer) */
-  public static int factorial(int n) throws IllegalArgumentException {
-    if (n < 0)
-      throw new IllegalArgumentException();     // argument must be nonnegative
-    else if (n == 0)
-      return 1;                                 // base case
-    else
-      return n * factorial(n-1);                // recursive case
-  }
-
-  /** Simple test, assuming valid integer given as command-line argument */
-  public static void main(String[] args) {
-    if (args.length > 0) {
-      int n = Integer.parseInt(args[0]);
-      try { System.out.println("factorial("+n+") = " + factorial(n)); }
-      catch (IllegalArgumentException e) {
-        System.out.println("Error: the factorial function is undefined for negative integers"); }
+    /**
+     * Computes the factorial of the given (nonnegative) integer)
+     */
+    public static int factorial(int n) throws IllegalArgumentException {
+        if (n < 0)
+            throw new IllegalArgumentException();    // argument must be nonnegative
+        else if (n == 0)
+            return 1;                                // base case
+        else
+            count++;                                 // increment the counter for each recursive call
+            return n * factorial(n - 1);          // recursive case
     }
-  }
+
+    /**
+     * Simple test, assuming valid integer given as command-line argument
+     */
+    public static void main(String[] args) {
+        if (args.length > 0) {
+            int n = Integer.parseInt(args[0]);
+            try {
+                System.out.println("factorial(" + n + ") = " + factorial(n));
+                System.out.println("Number of recursive calls: " + count);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: the factorial function is undefined for negative integers");
+            }
+        }
+    }
 
 }

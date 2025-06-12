@@ -20,7 +20,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.opsdevelop.teaching.Labs.Lab6Exercises.queues;
+package com.opsdevelop.teaching.Lab6Exercises.queues;
 
 /**
  * This provides one additional method not part of the general com.opsdevelop.teaching.Labs.Lab12Exercises.Lesson12Files.com.opsdevelop.teaching.Labs.Lab9Exercises.Lesson9Files.Queue interface.

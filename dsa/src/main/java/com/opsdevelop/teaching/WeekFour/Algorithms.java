@@ -88,6 +88,38 @@ public class Algorithms {
          */
     }
 
+//    public static boolean binarySearchRecursive(String keyName, int[] data, int target, int low, int high) {
+//        int[] arr = null;
+//
+//        try {
+//            arr = JsonReader.readJsonArray(keyName);
+//            if (arr.length > 0) {
+//                System.out.println("Size of current JSON loaded array -- " + arr.length);
+//            }
+//            long startTime = System.nanoTime();
+//
+//            if (low > high) {
+//                return false;                                           // interval empty; no match
+//            } else {
+//                int mid = (low + high) / 2;
+//                if (target == data[mid]) {
+//                    return true;                                          // found a match
+//                } else if (target < data[mid]) {
+//                    return binarySearchRecursive(keyName, data, target, low, mid - 1);      // recur left of the middle
+//                } else {
+//                    return binarySearchRecursive(keyName, data, target, mid + 1, high);
+//                }// recur right of the middle
+//            }
+//
+//            long endTime = System.nanoTime();
+//            long duration = endTime - startTime; // 1 primitive operation (subtraction)
+//            System.out.println("Time taken: " + duration + " nanoseconds"); // 3 primitive operations (string concatenation, output)
+//        } catch (IOException e) {
+//            logger.error("An error occurred:", e);
+//            return false; // Return false in case of an error
+//        }
+//    }
+
     // Selection Sort Algorithm
     // This algorithm sorts an array by repeatedly finding the minimum element from the unsorted part and putting it at the beginning.
     public static void selectionSort(String keyName) {

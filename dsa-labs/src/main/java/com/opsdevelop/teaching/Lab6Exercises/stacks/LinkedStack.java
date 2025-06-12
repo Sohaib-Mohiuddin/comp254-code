@@ -20,7 +20,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.opsdevelop.teaching.Labs.Lab6Exercises.stacks;
+package com.opsdevelop.teaching.Lab6Exercises.stacks;
 
 /**
  * Realization of a stack as an adaptation of a com.opsdevelop.teaching.Labs.Lab9Exercises.Lesson9Files.SinglyLinkedList.
