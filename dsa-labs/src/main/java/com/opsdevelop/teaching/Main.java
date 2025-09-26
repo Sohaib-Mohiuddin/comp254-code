@@ -1,5 +1,6 @@
 package com.opsdevelop.teaching;
 
+import java.util.ArrayList;
 // Lab 5 Imports
 import com.opsdevelop.teaching.Lab5Exercises.Lesson5Files.LinearSum;
 
