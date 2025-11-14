@@ -21,6 +21,9 @@ package com.opsdevelop.teaching.Lab5Exercises.Lesson5Files;/*
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+// import time
+import java.time.*;
+
 /**
  * Demonstration of recursive method for reversing an array's elements.
  *
@@ -47,6 +50,30 @@ public class ArrayReverse {
       int temp = data[low];
       data[low++] = data[high];            // post-increment of low
       data[high--] = temp;                 // post-decrement of high
+    }
+  }
+
+  // Main method to run experimental analysis on the two methods
+  public static void main(String[] args) {
+
+    for (int limit = 1000; limit < 100000; limit += 1000) {
+      int[] data = new int[limit];
+      for (int k = 0; k < limit; k++)
+        data[k] = k + 1;
+
+      // Test recursive method
+      long startTime = System.currentTimeMillis();
+      reverseArray(data, 0, limit - 1);
+      long endTime = System.currentTimeMillis();
+      long durationRecursive = endTime - startTime;
+      System.out.println("Recursive reverse for n=" + limit + " took " + durationRecursive + " currentTimeMillis.");
+
+      // Test iterative method
+      long startTimeIter = System.currentTimeMillis();
+      reverseIterative(data);
+      long endTimeIter = System.currentTimeMillis();
+      long durationIterative = endTimeIter - startTimeIter;
+      System.out.println("Iterative reverse for n=" + limit + " took " + durationIterative + " currentTimeMillis.");
     }
   }
 

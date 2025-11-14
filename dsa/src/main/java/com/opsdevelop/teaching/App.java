@@ -9,7 +9,7 @@ public class App {
          * 5k.json 250k ns; 10k.json 300k ns; 20k.json 2.48 ms; 50k.json ~3ms, ~4ms; 100k.json ~9.7ms
          * Run times are varying based on the system and environment.
          */
-        Algorithms.linearSearch("50k", 50001);
+        Algorithms.linearSearch("50k", 8888);
 
         /*
          * Binary Search Run Times
