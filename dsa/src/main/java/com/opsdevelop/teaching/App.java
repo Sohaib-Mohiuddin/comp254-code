@@ -16,14 +16,14 @@ public class App {
          * 5k.json 3000 ns; 10k.json 3000 ns; 20k.json 4000 ns; 50k.json 5000 ns; 100k.json 5500 ns
          * Run times are varying based on the system and environment.
          */
-        // Algorithms.binarySearch("100k", 54786);
+         Algorithms.binarySearch("1m", 544786);
 
         /*
          * Merge Sort Run Times
          * 5k.json 1.2 ms; 10k.json 2.4 ms; 20k.json 4.8 ms; 50k.json 12.3 ms; 100k.json 25.6 ms
          * Run times are varying based on the system and environment.
          */
-        Algorithms.bubbleSort("20k_random");
+        // Algorithms.bubbleSort("20k_random");
 
         /*
          * Selection Sort Run Times
