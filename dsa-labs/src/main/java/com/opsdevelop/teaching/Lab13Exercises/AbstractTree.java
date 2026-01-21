@@ -1,4 +1,4 @@
-package com.opsdevelop.teaching.Lab9Exercises.Lesson9Files;/*
+package com.opsdevelop.teaching.Lab13Exercises;/*
  * Copyright 2014, Michael T. Goodrich, Roberto Tamassia, Michael H. Goldwasser
  *
  * Developed for use with the book:
@@ -24,10 +24,11 @@ package com.opsdevelop.teaching.Lab9Exercises.Lesson9Files;/*
 import com.opsdevelop.teaching.Lab12Exercises.Lesson12Files.Position;
 import com.opsdevelop.teaching.Lab12Exercises.Lesson12Files.Queue;
 import com.opsdevelop.teaching.Lab12Exercises.Lesson12Files.Tree;
+import com.opsdevelop.teaching.Lab12Exercises.Lesson12Files.LinkedQueue;
 
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;         // for use as snapshot iterator
-import java.util.ArrayList;    // for use as snapshot iterator
+import java.util.List;
 
 /**
  * An abstract base class providing some functionality of the com.opsdevelop.teaching.Labs.Lab12Exercises.Lesson12Files.com.opsdevelop.teaching.Labs.Lab9Exercises.Lesson9Files.Tree interface.

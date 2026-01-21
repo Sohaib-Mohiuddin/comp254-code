@@ -170,7 +170,7 @@ public class Algorithms {
             if (arr.length > 0) {
                 System.out.println("Size of current JSON loaded array -- " + arr.length);
             }
-            long startTime = System.nanoTime();
+            long startTime = System.currentTimeMillis();
 
             int n = arr.length; // 1 primitive operation (assignment)
             for (int i = 0; i < n - 1; i++) { // 3 primitive operations (variable initialization, comparison, increment)
@@ -183,7 +183,7 @@ public class Algorithms {
                 }
             }
 
-            long endTime = System.nanoTime();
+            long endTime = System.currentTimeMillis();
 
             long duration = endTime - startTime; // 1 primitive operation (subtraction)
 
