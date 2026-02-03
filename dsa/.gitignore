@@ -1,3 +1,7 @@
+# X-Large Resources
+100m*.json
+*b*.json
+
 # Maven target directory
 /target
 
