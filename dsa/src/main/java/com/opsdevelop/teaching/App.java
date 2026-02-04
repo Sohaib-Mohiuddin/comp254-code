@@ -9,28 +9,28 @@ public class App {
          * 5k.json 250k ns; 10k.json 300k ns; 20k.json 2.48 ms; 50k.json ~3ms, ~4ms; 100k.json ~9.7ms
          * Run times are varying based on the system and environment.
          */
-        // Algorithms.linearSearch("50k", 8888);
+        // Algorithms.linearSearch("100m", 99999999);
 
         /*
          * Binary Search Run Times
          * 5k.json 3000 ns; 10k.json 3000 ns; 20k.json 4000 ns; 50k.json 5000 ns; 100k.json 5500 ns
          * Run times are varying based on the system and environment.
          */
-         // Algorithms.linearSearch("10m", 10000000);
+         // Algorithms.binarySearch("100m", 99999999);
 
         /*
          * Merge Sort Run Times
          * 5k.json 1.2 ms; 10k.json 2.4 ms; 20k.json 4.8 ms; 50k.json 12.3 ms; 100k.json 25.6 ms
          * Run times are varying based on the system and environment.
          */
-        // Algorithms.bubbleSort("20k_random");
+        //Algorithms.bubbleSort("100k_random");
 
         /*
          * Selection Sort Run Times
          * 5k.json 1.5 ms; 10k.json 3.2 ms; 20k.json 6.4 ms; 50k.json 16.8 ms; 100k.json 33.6 ms
          * Run times are varying based on the system and environment.
          */
-        Algorithms.selectionSort("20k_random");
+        //  Algorithms.selectionSort("100k_random");
     }
 
     public static void main(String[] args) {

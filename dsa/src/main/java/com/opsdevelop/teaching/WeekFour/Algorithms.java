@@ -19,7 +19,7 @@ public class Algorithms {
             if (arr.length > 0) {
                 System.out.println("Size of current JSON loaded array -- " + arr.length);
             }
-            long startTime = System.currentTimeMillis(); // 2 primitive operation (method call)
+            long startTime = System.nanoTime(); // 2 primitive operation (method call)
             boolean found = false; // 1 primitive operation (assignment)
             for (int i : arr) { // 2n primitive operations (variable initialization, comparison, increment)
                 if (i == target) { // 2 primitive operations (array element retrieval, comparison)
@@ -28,11 +28,11 @@ public class Algorithms {
                 }
             }
 
-            long endTime = System.currentTimeMillis(); // 1 primitive operation (method call)
+            long endTime = System.nanoTime(); // 1 primitive operation (method call)
             long duration = endTime - startTime; // 1 primitive operation (subtraction)
 
             System.out.println("Target found: " + found); // 2 primitive operations (string concatenation, output)
-            System.out.println("Time taken: " + duration + " milliseconds\n"); // 3 primitive operations (string concatenation, output)
+            System.out.println("Time taken: " + duration + " nanoseconds\n"); // 3 primitive operations (string concatenation, output)
         } catch (IOException e) {
             logger.error("An error occurred:", e);
         }
@@ -130,7 +130,7 @@ public class Algorithms {
             if (arr.length > 0) {
                 System.out.println("Size of current JSON loaded array -- " + arr.length);
             }
-            long startTime = System.nanoTime();
+            long startTime = System.currentTimeMillis();
 
             int n = arr.length; // 1 primitive operation (assignment)
             for (int i = 0; i < n - 1; i++) { // 3 primitive operations (variable initialization, comparison, increment)
@@ -145,7 +145,7 @@ public class Algorithms {
                 arr[i] = temp; // 2 primitive operations (array element retrieval, assignment)
             }
 
-            long endTime = System.nanoTime();
+            long endTime = System.currentTimeMillis();
 
             long duration = endTime - startTime; // 1 primitive operation (subtraction)
 
@@ -154,7 +154,7 @@ public class Algorithms {
                 System.out.print(i + " "); // 2 primitive operations (string concatenation, output)
             }
             System.out.println(); // 1 primitive operation (output)
-            System.out.println("Time taken: " + duration + " nanoseconds"); // 3 primitive operations (string concatenation, output)
+            System.out.println("Time taken: " + duration + " milliseconds"); // 3 primitive operations (string concatenation, output)
         } catch (IOException e) {
             logger.error("An error occurred:", e);
         }
